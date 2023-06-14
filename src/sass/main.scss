@@ -11,7 +11,7 @@ $light-color: #f4fefd;
 
 body {
     background-color: $primary-color;
-    color: $light-color
+    color: $light-color;
 }
 
 .App {
@@ -64,16 +64,21 @@ nav {
     }
 }
 
+.login,
+.posts-feed,
+.create-post {
+    min-height: calc(100dvh - 86px);
+}
+
 .login {
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
 
 
     p {
-        width: 100%;
         font-size: 1.2em;
         margin: 10px;
     }
@@ -90,7 +95,7 @@ nav {
 .create-post {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     margin: 10px;
 
     form {
@@ -110,6 +115,10 @@ nav {
             font-size: 1.2em;
             margin: 5px 0;
             border-radius: 5px;
+        }
+
+        textarea {
+            height: 200px;
         }
 
         input[type=submit] {
@@ -171,6 +180,14 @@ nav {
             }
         }
     }
+}
+
+footer {
+    display: flex;
+    justify-content: right;
+    background-color: $accent-color;
+    padding: 10px 20px;
+    font-size: 1.1em;
 }
 
 @media only screen and (min-width: 415px) {

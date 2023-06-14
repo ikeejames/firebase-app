@@ -4,6 +4,7 @@ import { Navbar } from './components/navbar'
 import { Main } from './pages/main/main'
 import { Login } from './pages/login'
 import { CreatePost } from './pages/create-post/create-post'
+import { Footer } from './components/footer'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/createpost' element={<CreatePost />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   )
